@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres
+    container_name: product-postgres
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER4=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=productDb
+    volumes:
+      - db:/var/lib/postgres/data
+
+volumes:
+  db:
